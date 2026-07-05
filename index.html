@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        .options {
+            margin-top: 5px;
+        }
+
+        .options input {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button,
+        input[type="reset"],
+        input[type="submit"] {
+            width: 30%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+        }
+
+        button {
+            background: #007BFF;
+        }
+
+        input[type="submit"] {
+            background: green;
+        }
+
+        input[type="reset"] {
+            background: red;
+        }
+
+        button:hover,
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            opacity: 0.85;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Registration Form</h2>
+
+    <form>
+
+        <!-- Text -->
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <!-- Password -->
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password">
+
+        <!-- Number -->
+        <label for="age">Age</label>
+        <input type="number" id="age" min="1" max="100">
+
+        <!-- Color -->
+        <label for="color">Favorite Color</label>
+        <input type="color" id="color">
+
+        <!-- Checkbox -->
+        <label>Hobbies</label>
+        <div class="options">
+            <input type="checkbox" id="reading">
+            <label for="reading" style="display:inline;">Reading</label><br>
+
+            <input type="checkbox" id="sports">
+            <label for="sports" style="display:inline;">Sports</label><br>
+
+            <input type="checkbox" id="music">
+            <label for="music" style="display:inline;">Music</label>
+        </div>
+
+        <!-- Radio Buttons -->
+        <label>Gender</label>
+        <div class="options">
+            <input type="radio" id="male" name="gender">
+            <label for="male" style="display:inline;">Male</label>
+
+            <input type="radio" id="female" name="gender">
+            <label for="female" style="display:inline;">Female</label>
+
+            <input type="radio" id="other" name="gender">
+            <label for="other" style="display:inline;">Other</label>
+        </div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <button type="button">Click Me</button>
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+        </div>
+
+    </form>
+</div>
+
+</body>
+</html>
