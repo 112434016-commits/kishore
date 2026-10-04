@@ -1,0 +1,38 @@
+:root{--ink:#2b1d14;--paper:#fff8ec;--chili:#c62f1d;--leaf:#2f7d4f;--line:#e8d5b5}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Trebuchet MS",Verdana,sans-serif;background:var(--paper);color:var(--ink)}
+header{background:var(--ink);color:var(--paper);padding:14px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+header h1{margin:0;font:700 1.5rem Georgia,serif;color:#ffd27a}
+header a{color:var(--paper);margin-left:14px;text-decoration:none}
+header a:hover{text-decoration:underline}
+main{max-width:960px;margin:20px auto;padding:0 16px}
+.card{background:#fff;border:2px solid var(--line);border-radius:10px;padding:20px}
+form label{display:block;margin:12px 0 4px;font-weight:700}
+input[type=text],input[type=password],select{width:100%;padding:10px;border:2px solid var(--line);border-radius:6px;font-size:1rem}
+select[multiple]{height:110px}
+.pw{display:flex;gap:6px}.pw button{width:auto}
+.inline label{display:inline;font-weight:400;margin-right:14px}
+.err{color:var(--chili);font-size:.85rem;min-height:1em}
+.msg{background:#fde4df;border:1px solid var(--chili);padding:10px;border-radius:6px;margin-bottom:10px}
+button,.btn{background:var(--chili);color:#fff;border:0;padding:10px 18px;border-radius:6px;font-size:1rem;cursor:pointer;text-decoration:none;display:inline-block}
+button.alt{background:var(--leaf)}button.grey{background:#777}
+button:disabled{background:#bbb;cursor:not-allowed}
+:focus-visible{outline:3px solid #1a73e8;outline-offset:2px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.food{border:3px solid var(--line);border-radius:10px;background:#fff;overflow:hidden;text-align:center;padding-bottom:10px}
+.food img{width:100%;cursor:pointer;display:block}
+.food.sel{border-color:var(--leaf)}
+.food.out{opacity:.5}
+.food.out img{cursor:not-allowed}
+.tag{font-size:.8rem;padding:2px 8px;border-radius:10px;color:#fff}
+.in{background:var(--leaf)}.no{background:#999}
+.qty{display:none;justify-content:center;gap:8px;align-items:center;margin-top:6px}
+.food.sel .qty{display:flex}
+.qty button{padding:2px 12px}
+.bill{position:sticky;bottom:0;background:var(--ink);color:#ffd27a;padding:14px;margin-top:16px;border-radius:10px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+table{width:100%;border-collapse:collapse;background:#fff}
+th,td{padding:10px;border-bottom:1px solid var(--line);text-align:left}
+.steps{display:flex;gap:6px;margin:20px 0}
+.step{flex:1;text-align:center;padding:12px 4px;border-radius:8px;background:#eee;font-size:.9rem}
+.step.done{background:var(--leaf);color:#fff}
+.step.cancel{background:var(--chili);color:#fff}
